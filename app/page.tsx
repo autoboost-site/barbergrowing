@@ -309,7 +309,7 @@ export default function Home() {
                 height={80}
               />
             </div>
-            <p className="footer-tagline">People change girlfriends, but not barbers.</p>
+            <p className="footer-tagline">You can change your girlfriend but not your barber.</p>
             <div className="footer-divider"></div>
             <p className="footer-copy">&copy; 2024 Barber Growing. All rights reserved. Crafted in Bali.</p>
           </div>
