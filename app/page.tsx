@@ -59,9 +59,14 @@ export default function Home() {
           <div className="about-grid">
             <div className="about-image">
               <div className="image-frame">
-                <div className="image-placeholder">
-                  <span className="placeholder-text">RIO</span>
-                </div>
+                <Image
+                  src="/Rio.png"
+                  alt="Rio - Professional Barber"
+                  className="rio-photo"
+                  width={400}
+                  height={500}
+                  priority
+                />
                 <div className="frame-corner top-left"></div>
                 <div className="frame-corner top-right"></div>
                 <div className="frame-corner bottom-left"></div>

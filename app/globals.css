@@ -97,7 +97,8 @@ img { max-width: 100%; display: block; }
 .about { padding: var(--section-padding) 0; background: var(--black); }
 .about-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; }
 .about-image { position: relative; }
-.image-frame { position: relative; aspect-ratio: 3/4; background: var(--black-light); }
+.image-frame { position: relative; aspect-ratio: 3/4; background: var(--black-light); overflow: hidden; }
+.rio-photo { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .image-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--black-medium) 0%, var(--black-light) 100%); }
 .placeholder-text { font-family: var(--font-heading); font-size: 80px; color: var(--gold); opacity: 0.2; letter-spacing: 10px; }
 .frame-corner { position: absolute; width: 60px; height: 60px; border: 1px solid var(--gold); }
