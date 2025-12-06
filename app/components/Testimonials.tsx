@@ -20,6 +20,24 @@ const testimonials = [
     avatar: "DP",
     name: "David Park",
     title: "Photographer, South Korea"
+  },
+  {
+    text: "Been living in Bali for 3 years and Rio is the only barber I trust. He knows exactly what I want without me having to explain. The convenience of villa service is unmatched.",
+    avatar: "TH",
+    name: "Thomas Henderson",
+    title: "Expat Business Owner, UK"
+  },
+  {
+    text: "Had my wedding in Ubud. Rio came to our villa and sorted out the entire groomsmen party. Everyone looked incredible. Absolute legend.",
+    avatar: "RS",
+    name: "Ryan Santos",
+    title: "Software Engineer, USA"
+  },
+  {
+    text: "First time using a mobile barber and I'm never going back to a shop. Rio's attention to detail is next level. Worth every rupiah.",
+    avatar: "LA",
+    name: "Lucas Anderson",
+    title: "Content Creator, Canada"
   }
 ];
 
@@ -29,9 +47,17 @@ export default function Testimonials() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
+
+  const goToPrev = () => {
+    setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const goToNext = () => {
+    setCurrent((prev) => (prev + 1) % testimonials.length);
+  };
 
   return (
     <section className="testimonials" id="testimonials">
@@ -44,20 +70,32 @@ export default function Testimonials() {
             <span></span><span></span><span></span>
           </div>
         </div>
-        <div className="testimonials-slider">
-          {testimonials.map((t, i) => (
-            <div key={i} className={`testimonial-card ${i === current ? 'active' : ''}`}>
-              <div className="testimonial-quote">&ldquo;</div>
-              <p className="testimonial-text">{t.text}</p>
-              <div className="testimonial-author">
-                <div className="author-avatar">{t.avatar}</div>
-                <div className="author-info">
-                  <span className="author-name">{t.name}</span>
-                  <span className="author-title">{t.title}</span>
+        <div className="testimonials-wrapper">
+          <button className="testimonial-arrow prev" onClick={goToPrev} aria-label="Previous testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+          </button>
+          <div className="testimonials-slider">
+            {testimonials.map((t, i) => (
+              <div key={i} className={`testimonial-card ${i === current ? 'active' : ''}`}>
+                <div className="testimonial-quote">&ldquo;</div>
+                <p className="testimonial-text">{t.text}</p>
+                <div className="testimonial-author">
+                  <div className="author-avatar">{t.avatar}</div>
+                  <div className="author-info">
+                    <span className="author-name">{t.name}</span>
+                    <span className="author-title">{t.title}</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <button className="testimonial-arrow next" onClick={goToNext} aria-label="Next testimonial">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </button>
         </div>
         <div className="testimonial-nav">
           {testimonials.map((_, i) => (
@@ -65,8 +103,12 @@ export default function Testimonials() {
               key={i}
               className={`nav-dot ${i === current ? 'active' : ''}`}
               onClick={() => setCurrent(i)}
+              aria-label={`Go to testimonial ${i + 1}`}
             ></button>
           ))}
+        </div>
+        <div className="testimonial-counter">
+          {current + 1} / {testimonials.length}
         </div>
       </div>
     </section>
