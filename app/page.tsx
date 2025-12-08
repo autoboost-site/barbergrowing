@@ -189,36 +189,66 @@ export default function Home() {
             <p className="section-subtitle">Every cut is a signature. Every style, a statement.</p>
           </div>
           <div className="gallery-grid">
-            <div className="gallery-item large">
-              <div className="gallery-placeholder"><span>Classic Fade</span></div>
+            <div className="gallery-item">
+              <Image
+                src="/The Executive.png"
+                alt="The Executive - Classic Fade"
+                className="gallery-image"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
               <div className="gallery-overlay">
                 <span className="gallery-title">The Executive</span>
                 <span className="gallery-desc">Clean. Sharp. Powerful.</span>
               </div>
             </div>
             <div className="gallery-item">
-              <div className="gallery-placeholder"><span>Modern Texture</span></div>
+              <Image
+                src="/The Creative.png"
+                alt="The Creative - Modern Texture"
+                className="gallery-image"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
               <div className="gallery-overlay">
                 <span className="gallery-title">The Creative</span>
                 <span className="gallery-desc">Rules are suggestions.</span>
               </div>
             </div>
             <div className="gallery-item">
-              <div className="gallery-placeholder"><span>Beard Design</span></div>
+              <Image
+                src="/The Vicking.png"
+                alt="The Viking - Beard Design"
+                className="gallery-image"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
               <div className="gallery-overlay">
                 <span className="gallery-title">The Viking</span>
                 <span className="gallery-desc">Tamed wilderness.</span>
               </div>
             </div>
             <div className="gallery-item">
-              <div className="gallery-placeholder"><span>Slick Back</span></div>
+              <Image
+                src="/The Don.png"
+                alt="The Don - Slick Back"
+                className="gallery-image"
+                fill
+                sizes="(max-width: 768px) 100vw, 25vw"
+              />
               <div className="gallery-overlay">
                 <span className="gallery-title">The Don</span>
                 <span className="gallery-desc">Timeless authority.</span>
               </div>
             </div>
-            <div className="gallery-item large">
-              <div className="gallery-placeholder"><span>Full Transformation</span></div>
+            <div className="gallery-item wide">
+              <Image
+                src="/The Reinvention.png"
+                alt="The Reinvention - Full Transformation"
+                className="gallery-image"
+                fill
+                sizes="(max-width: 768px) 100vw, 100vw"
+              />
               <div className="gallery-overlay">
                 <span className="gallery-title">The Reinvention</span>
                 <span className="gallery-desc">Same man. New era.</span>
