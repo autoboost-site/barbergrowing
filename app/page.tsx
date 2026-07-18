@@ -127,7 +127,7 @@ export default function Home() {
               <p className="service-desc">Premium haircut at your villa. Consultation, precision cutting, and styling. You sit back, Rio works his magic.</p>
               <div className="service-details">
                 <span className="service-duration">30 min</span>
-                <span className="service-price">IDR 200K</span>
+                <span className="service-price">IDR 250K</span>
               </div>
             </div>
             <div className="service-card featured">
@@ -141,7 +141,7 @@ export default function Home() {
               <p className="service-desc">The complete package. Fresh haircut plus beard trim and shaping. Walk out of your villa looking sharp from every angle.</p>
               <div className="service-details">
                 <span className="service-duration">45 min</span>
-                <span className="service-price">IDR 300K</span>
+                <span className="service-price">IDR 350K</span>
               </div>
             </div>
             <div className="service-card">
@@ -155,7 +155,7 @@ export default function Home() {
               <p className="service-desc">Keep your beard looking clean and sharp. Precision lines, perfect shape, and the finishing touches that make the difference.</p>
               <div className="service-details">
                 <span className="service-duration">20 min</span>
-                <span className="service-price">IDR 200K</span>
+                <span className="service-price">IDR 250K</span>
               </div>
             </div>
             <div className="service-card">
@@ -170,7 +170,7 @@ export default function Home() {
               <p className="service-desc">Got the whole crew at your villa? Rio handles everyone. Same quality, same precision—group rates for 3 or more people.</p>
               <div className="service-details">
                 <span className="service-duration">Per person</span>
-                <span className="service-price">IDR 200K+</span>
+                <span className="service-price">IDR 250K+</span>
               </div>
             </div>
           </div>
